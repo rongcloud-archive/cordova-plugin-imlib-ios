@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="com.RongCloud.lib"
+  version="0.0.1">
+
+    <name>RongCloudLibPlugin</name>
+    <description>RongCloudLibPlugin Description</description>
+    <author>Asial Corporation</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    <js-module src="www/RongCloudLibPlugin.js" name="RongCloudLibPlugin">
+        <clobbers target="RongCloudLibPlugin" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="RongCloudLibPlugin">
+                <param name="ios-package" value="RongCloudLibPlugin"/>
+            </feature>
+    </config-file>
+        <header-file src="src/ios/RongCloudConstant.h" target-dir="src/ios" />
+        <header-file src="src/ios/RongCloudHandler.h" target-dir="src/ios" />
+        <header-file src="src/ios/RongCloudLibPlugin.h" target-dir="src/ios" />
+        <header-file src="src/ios/RongCloudModel.h" target-dir="src/ios" />
+
+        <source-file src="src/ios/RongCloudHandler.m" target-dir="src/ios" />
+        <source-file src="src/ios/RongCloudLibPlugin.m" target-dir="src/ios" />
+        <source-file src="src/ios/RongCloudModel.m" target-dir="src/ios" />
+
+        <framework src="src/ios/RongIMLib.framework" custom="true" />
+        <framework src="AssetsLibrary.framework" />
+        <framework src="ImageIO.framework" />
+        <framework src="MapKit.framework" />
+        <framework src="CoreLocation.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="OpenGLES.framework" />
+        <framework src="CoreVideo.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="CoreMedia.framework" />
+        <framework src="CoreAudio.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="AudioToolbox.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="libxml2.dylib" />
+        <framework src="libz.dylib" />
+        <framework src="libstdc++.dylib" />
+        <framework src="libsqlite3.dylib" />
+        <framework src="libc++.dylib" />
+        <framework src="libc++abi.dylib" />
+    </platform>
+
+</plugin>
